@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<!-- 요청 클라이언트가 다양한 디바이스이므로 반드시 html 일 필요는 없다, 따라서, 중립적인 데이터 형태인 json, xml등으로 겨로가를 보여줘야 한다-->
+
+	<!-- <mvc:annotation-driven /> -->
+	
+	<!-- 빈 등록 -->
+	<context:component-scan base-package="com.last.app.controller.rest"/>
+
+	<!-- 
+	컨버터 등록 
+	Converter란? 자바 객체와 데이터포맷(json, xml, html등) 간 데이터 변환을 자동으로 변환해주는 스프링의 객체
+	-->
+
+</beans>
